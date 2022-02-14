@@ -3,6 +3,9 @@ FROM jupyter/base-notebook:python-3.7.6
 
 USER root
 
+RUN cd /etc/apt/sources.list.d \
+ && wget http://packages.mccode.org/debian/mccode.list
+
 RUN apt-get -y update \
  && apt-get install -y dbus-x11 \
    firefox \
@@ -11,7 +14,10 @@ RUN apt-get -y update \
    xfce4-session \
    xfce4-settings \
    xorg \
-   xubuntu-icon-theme
+   xubuntu-icon-theme \
+   mcxtrace-suite-python \
+   view3dscene \
+   libopenmpi-dev
 
 # Remove light-locker to prevent screen lock
 RUN wget 'https://sourceforge.net/projects/turbovnc/files/2.2.5/turbovnc_2.2.5_amd64.deb/download' -O turbovnc_2.2.5_amd64.deb && \
