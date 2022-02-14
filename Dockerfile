@@ -16,6 +16,7 @@ RUN apt-get -y update \
    xorg \
    xubuntu-icon-theme \
    mcxtrace-suite-python \
+   mcstas-suite-python \
    view3dscene \
    libopenmpi-dev
 
