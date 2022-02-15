@@ -30,6 +30,7 @@ RUN apt-get -y update \
    xorg \
    xubuntu-icon-theme \
    view3dscene \
+   python3-pyqt5 \
    libopenmpi-dev
    
 RUN apt install -y ./*.deb
