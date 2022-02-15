@@ -31,6 +31,7 @@ RUN apt-get -y update \
    xubuntu-icon-theme \
    view3dscene \
    python3-pyqt5 \
+   xdg-utils \
    libopenmpi-dev
    
 # install McXtrace, and make sure we use the python from the system for it
