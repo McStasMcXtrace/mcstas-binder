@@ -43,7 +43,7 @@ RUN ln -s /usr/bin/python3.8 /usr/share/mcxtrace/1.7/bin/
 RUN echo "#!/bin/sh" > /usr/local/bin/mxgui_noconda
 RUN echo "export PATH=/usr/share/mcxtrace/1.7/bin:$PATH" >> /usr/local/bin/mxgui_noconda
 RUN echo "conda deactivate" >> /usr/local/bin/mxgui_noconda
-RUN echo "mxgui \$1" >> /usr/local/bin/mxgui_noconda
+RUN echo "mxgui" >> /usr/local/bin/mxgui_noconda
 RUN sed -i 's|Exec=mxgui|Exec=/usr/local/bin/mxgui_noconda|' /usr/share/applications/McXtrace-1.7-py.desktop
 RUN chmod a+x /usr/local/bin/mxgui_noconda
 RUN cp /usr/share/applications/McXtrace-1.7-py.desktop ~jovyan/Desktop
