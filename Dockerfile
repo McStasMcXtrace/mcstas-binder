@@ -1,10 +1,23 @@
-FROM jupyter/base-notebook:python-3.7.6
+FROM jupyter/base-notebook
 
 
 USER root
 
-RUN cd /etc/apt/sources.list.d \
- && wget http://packages.mccode.org/debian/mccode.list
+# get McCode debian packages
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcxtrace-1.7-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcxtrace-comps-1.7-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcxtrace-manuals-1.7-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcxtrace-suite-python_1.7_all.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcxtrace-tools-matlab-mxplot-1.7-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcxtrace-tools-perl-cmdline-1.7-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcxtrace-tools-python-mccodelib-1.7-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcxtrace-tools-python-mxdisplay-pyqtgraph-1.7-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcxtrace-tools-python-mxdisplay-webgl-1.7-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcxtrace-tools-python-mxdoc-1.7-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcxtrace-tools-python-mxplot-matplotlib-1.7-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcxtrace-tools-python-mxplot-svg-1.7-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcxtrace-tools-python-mxplot-pyqtgraph-1.7-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcxtrace-tools-python-mxrun-1.7-deb64.deb
 
 RUN apt-get -y update \
  && apt-get install -y dbus-x11 \
@@ -15,10 +28,10 @@ RUN apt-get -y update \
    xfce4-settings \
    xorg \
    xubuntu-icon-theme \
-   mcxtrace-suite-python \
-   mcstas-suite-python \
    view3dscene \
    libopenmpi-dev
+   
+RUN apt install -y ./*.deb
 
 # Remove light-locker to prevent screen lock
 RUN wget 'https://sourceforge.net/projects/turbovnc/files/2.2.5/turbovnc_2.2.5_amd64.deb/download' -O turbovnc_2.2.5_amd64.deb && \
