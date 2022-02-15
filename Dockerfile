@@ -35,6 +35,9 @@ RUN apt-get -y update \
    
 RUN apt install -y ./*.deb
 
+RUN ln -s /usr/bin/python3.8 /usr/share/mcxtrace/1.7/bin/python3
+RUN ln -s /usr/bin/python3.8 /usr/share/mcxtrace/1.7/bin/
+
 # Remove light-locker to prevent screen lock
 RUN wget 'https://sourceforge.net/projects/turbovnc/files/2.2.5/turbovnc_2.2.5_amd64.deb/download' -O turbovnc_2.2.5_amd64.deb && \
    apt-get install -y -q ./turbovnc_2.2.5_amd64.deb && \
