@@ -33,10 +33,17 @@ RUN apt-get -y update \
    python3-pyqt5 \
    libopenmpi-dev
    
+# install McXtrace, and make sure we use the python from the system for it
 RUN apt install -y ./*.deb
-
+RUN rm *.deb
 RUN ln -s /usr/bin/python3.8 /usr/share/mcxtrace/1.7/bin/python3
 RUN ln -s /usr/bin/python3.8 /usr/share/mcxtrace/1.7/bin/
+
+# configure McXtrace launcher to install PATH
+RUN echo "export PATH=/usr/share/mcxtrace/1.7/bin:$PATH" > /usr/local/bin/mxgui_noconda
+RUN echo "conda deactivate" >> /usr/local/bin/mxgui_noconda
+RUN echo "mxgui $1" >> /usr/local/bin/mxgui_noconda
+RUN sed -i 's|Exec=mxgui|Exec=/usr/local/bin/mxgui_noconda|' /usr/share/applications/McXtrace-1.7-py.desktop
 
 # Remove light-locker to prevent screen lock
 RUN wget 'https://sourceforge.net/projects/turbovnc/files/2.2.5/turbovnc_2.2.5_amd64.deb/download' -O turbovnc_2.2.5_amd64.deb && \
