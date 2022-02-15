@@ -46,6 +46,8 @@ RUN echo "conda deactivate" >> /usr/local/bin/mxgui_noconda
 RUN echo "mxgui \$1" >> /usr/local/bin/mxgui_noconda
 RUN sed -i 's|Exec=mxgui|Exec=/usr/local/bin/mxgui_noconda|' /usr/share/applications/McXtrace-1.7-py.desktop
 RUN chmod a+x /usr/local/bin/mxgui_noconda
+RUN cp /usr/share/applications/McXtrace-1.7-py.desktop ~jovyan/Desktop
+RUN chmod a+x ~jovyan/Desktop/McXtrace-1.7-py.desktop
 
 # Remove light-locker to prevent screen lock
 RUN wget 'https://sourceforge.net/projects/turbovnc/files/2.2.5/turbovnc_2.2.5_amd64.deb/download' -O turbovnc_2.2.5_amd64.deb && \
