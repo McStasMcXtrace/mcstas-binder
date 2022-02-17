@@ -41,7 +41,7 @@ RUN apt install -y ./*.deb
 RUN rm *.deb
 RUN ln -s /usr/bin/python3.8 /usr/share/mcxtrace/1.7/bin/python3
 RUN ln -s /usr/bin/python3.8 /usr/share/mcxtrace/1.7/bin/
-RUN ln -s /usr/share/mcxtrace/1.7/editors/mccode.lang /usr/share/gtksourceview-3.0/language-specs/
+# RUN ln -s /usr/share/mcxtrace/1.7/editors/mccode.lang /usr/share/gtksourceview-3.0/language-specs/
 
 # configure McXtrace launcher to install PATH via a script
 RUN echo "#!/bin/sh" > /usr/local/bin/mxgui_noconda
