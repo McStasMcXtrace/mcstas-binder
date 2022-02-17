@@ -42,7 +42,6 @@ RUN apt install -y ./*.deb
 RUN rm *.deb
 RUN ln -s /usr/bin/python3.8 /usr/share/mcxtrace/1.7/bin/python3
 RUN ln -s /usr/bin/python3.8 /usr/share/mcxtrace/1.7/bin/
-RUN ln -s /usr/share/mcxtrace/1.7/editors/mccode.lang /usr/share/gtksourceview-4/language-specs/
 
 # configure McXtrace launcher to install PATH via a script
 RUN echo "#!/bin/sh" > /usr/local/bin/mxgui_noconda
@@ -51,8 +50,6 @@ RUN echo "conda deactivate" >> /usr/local/bin/mxgui_noconda
 RUN echo "mxgui" >> /usr/local/bin/mxgui_noconda
 RUN sed -i 's|Exec=mxgui|Exec=/usr/local/bin/mxgui_noconda|' /usr/share/applications/McXtrace-1.7-py.desktop
 RUN chmod a+x /usr/local/bin/mxgui_noconda
-# RUN cp /usr/share/applications/McXtrace-1.7-py.desktop ~jovyan/Desktop
-# RUN chmod a+x ~jovyan/Desktop/McXtrace-1.7-py.desktop
 
 # Remove light-locker to prevent screen lock
 RUN wget 'https://sourceforge.net/projects/turbovnc/files/2.2.5/turbovnc_2.2.5_amd64.deb/download' -O turbovnc_2.2.5_amd64.deb && \
