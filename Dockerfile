@@ -18,7 +18,10 @@ RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas
 RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcplot-matplotlib-2.7.1-deb64.deb
 RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcplot-pyqtgraph-2.7.1-deb64.deb
 RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcplot-svg-2.7.1-deb64.deb
-RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcrun-2.7.1-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcrun-2.7.1-deb64.deb 
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-ncrystal-2.7.1-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcresplot-2.7.1-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcdisplay-mantid-2.7.1-deb64.deb
 
 # get McCode debian packages: release 3.1
 RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-3.1-deb64.deb
@@ -35,6 +38,10 @@ RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas
 RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcplot-matplotlib-3.1-deb64.deb
 RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcplot-pyqtgraph-3.1-deb64.deb
 RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcrun-3.1-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-ncrystal-3.1-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcresplot-3.1-deb64.deb
+RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcdisplay-mantid-3.1-deb64.deb
+
 
 RUN apt-get -y update \
  && apt-get install -y dbus-x11 \
