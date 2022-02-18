@@ -69,12 +69,12 @@ RUN ln -s /usr/bin/python3.8 /usr/share/mcstas/3.1/bin/python3
 RUN ln -s /usr/bin/python3.8 /usr/share/mcstas/3.1/bin/
 
 # configure McStas 2.7.1 launcher to install PATH via a script
-RUN echo "#!/bin/sh" > /usr/local/bin/mcgui17_noconda
-RUN echo "export PATH=/usr/share/mcstas/2.7.1/bin:$PATH" >> /usr/local/bin/mcgui17_noconda
-RUN echo "conda deactivate" >> /usr/local/bin/mcgui17_noconda
-RUN echo "mcgui" >> /usr/local/bin/mcgui17_noconda
-RUN sed -i 's|Exec=mcgui|Exec=/usr/local/bin/mcgui17_noconda|' /usr/share/applications/McStas-2.7.1-py.desktop
-RUN chmod a+x /usr/local/bin/mcgui17_noconda
+RUN echo "#!/bin/sh" > /usr/local/bin/mcgui271_noconda
+RUN echo "export PATH=/usr/share/mcstas/2.7.1/bin:$PATH" >> /usr/local/bin/mcgui271_noconda
+RUN echo "conda deactivate" >> /usr/local/bin/mcgui271_noconda
+RUN echo "mcgui" >> /usr/local/bin/mcgui271_noconda
+RUN sed -i 's|Exec=mcgui|Exec=/usr/local/bin/mcgui271_noconda|' /usr/share/applications/McStas-2.7.1-py.desktop
+RUN chmod a+x /usr/local/bin/mcgui271_noconda
 
 # configure McStas 3.1 launcher to install PATH via a script
 RUN echo "#!/bin/sh" > /usr/local/bin/mcgui31_noconda
