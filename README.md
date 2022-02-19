@@ -9,8 +9,10 @@
 
 Click on the Binder Badge above or https://mybinder.org/v2/gh/McStasMcXtrace/mcstas-binder/master?urlpath=desktop
 
-A full desktop, running at Binder for free, will appear in your browser afetr e.g. a few minutes (be patient).
+A full desktop, running at Binder for free, will appear in your browser after e.g. a few minutes (be patient).
 The [McStas](http://mcstas.org/) software is available from the __Applications__ menu in group __Education__.
+
+Both the legacy version 2.x and the 'next-generation' 3.x (with revised grammar, compilation and performance effiiency) are available. You are welcome to use MPI clustering to distribute the computations over all CPU cores. There is however no GPU support for the 3.x release.
 
 ## Credits
 
