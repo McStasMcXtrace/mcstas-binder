@@ -7,7 +7,7 @@
 
 ## Usage
 
-Click on the Binder Badge above or https://mybinder.org/v2/gh/McStasMcXtrace/mcstas-binder/master?urlpath=desktop
+Click on the Binder Badge above or https://mybinder.org/v2/gh/McStasMcXtrace/mcstas-binder/with-scipp?urlpath=lab
 
 A full desktop, running at Binder for free, will appear in your browser after e.g. a few minutes (be patient).
 The [McStas](http://mcstas.org/) software is available from the __Applications__ menu in group __Education__.
