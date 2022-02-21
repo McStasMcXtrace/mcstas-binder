@@ -1,5 +1,5 @@
-# McStas Binder from Jupyter Desktop Server
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/McStasMcXtrace/mcstas-binder/master?urlpath=desktop)
+# McStas Binder from Jupyter Desktop Server, includes McStasScript, NeXus and SCIPP
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/McStasMcXtrace/mcstas-binder/with-scipp?urlpath=lab)
 
 [McStas](http://mcstas.org/) neutron beam-line simulations in a "free" computer at Binder.
 
