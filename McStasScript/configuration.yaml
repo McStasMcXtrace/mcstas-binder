@@ -1,0 +1,5 @@
+other:
+  characters_per_line: 85
+paths:
+  mcrun_path: /usr/share/mcstas/2.7.1/bin/
+  mcstas_path: /usr/share/mcstas/2.7.1/
