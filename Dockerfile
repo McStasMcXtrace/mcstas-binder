@@ -60,7 +60,8 @@ RUN apt-get -y update \
    evince \
    libopenmpi-dev \
    libnexus1 \
-   libnexus-dev
+   libnexus-dev \
+   git
    
 # install McStas, and make sure we use the python from the system for it
 RUN apt install -y ./*.deb

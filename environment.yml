@@ -4,6 +4,22 @@ dependencies:
   - jupyter-server-proxy>=1.4
   - pip
   - websockify
+  - ess-dmsc::ess-streaming-data-types
+  - h5py
+  - ipykernel = 6.3.1  # see https://github.com/ipython/ipykernel/issues/771
+  - ipympl
+  - ipython
+  - ipywidgets
+  - jupyterlab
+  - jupyterlab_widgets
+  - jupyter_nbextensions_configurator
+  - matplotlib-base
+  - nodejs
+  - python-confluent-kafka
+  - pythreejs
+  - scipp::mantid-framework
+  - scipp::scippneutron
+  - scipy
   - pip:
       - McStasScript
       - .
