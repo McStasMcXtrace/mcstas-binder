@@ -58,6 +58,8 @@ RUN apt-get -y update \
    gedit \
    gedit-plugins \
    evince \
+   gnuplot \
+   octave \
    libopenmpi-dev \
    libnexus1 \
    libnexus-dev
