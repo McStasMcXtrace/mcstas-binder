@@ -62,7 +62,8 @@ RUN apt-get -y update \
    octave \
    libopenmpi-dev \
    libnexus1 \
-   libnexus-dev
+   libnexus-dev \
+   git
    
 # install McStas, and make sure we use the python from the system for it
 RUN apt install -y ./*.deb
@@ -105,4 +106,7 @@ USER $NB_USER
 RUN cd /opt/install && \
    conda env update -n base --file environment.yml
 
-COPY McStasScript/configuration.yaml  /opt/conda/lib/python3.9/site-packages/mcstasscript/
+COPY McStasScript/configuration.yaml  /opt/conda/lib/python3.10/site-packages/mcstasscript/
+
+RUN cd /home/jovyan && git clone https://github.com/PaNOSC-ViNYL/McStasScript-notebooks.git
+

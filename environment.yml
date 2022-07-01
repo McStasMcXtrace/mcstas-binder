@@ -6,4 +6,6 @@ dependencies:
   - websockify
   - pip:
       - McStasScript
+      - ply
+      - ipympl
       - .
