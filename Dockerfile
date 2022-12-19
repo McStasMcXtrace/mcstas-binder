@@ -21,6 +21,8 @@ RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas
 &&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-ncrystal-2.7.2-deb64.deb \
 &&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcresplot-2.7.2-deb64.deb \
 &&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcdisplay-mantid-2.7.2-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-mcpl-2.7.2-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-ncrystal-2.7.2-deb64.deb \
 &&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-3.2-deb64.deb \
 &&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-comps-3.2-deb64.deb \
 &&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-manuals-3.2-deb64.deb \
@@ -37,6 +39,8 @@ RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas
 &&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-ncrystal-3.2-deb64.deb \
 &&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcresplot-3.2-deb64.deb \
 &&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcdisplay-mantid-3.2-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-mcpl-3.2-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-ncrystal-3.2-deb64.deb \
 &&   apt update && apt install -y software-properties-common && add-apt-repository ppa:mozillateam/ppa \
 && echo 'Package: *' > /etc/apt/preferences.d/mozilla-firefox \
 && echo Pin: release o=LP-PPA-mozillateam >> /etc/apt/preferences.d/mozilla-firefox \
