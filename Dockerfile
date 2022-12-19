@@ -88,7 +88,7 @@ USER $NB_USER
 RUN cd /opt/install && \
    conda env update -n base --file environment.yml
 
-COPY --chown=$NB_USER:$NB_USER McStasScript/configuration.yaml  /opt/conda/lib/python3.10/site-packages/mcstasscript/
+COPY --chown=$NB_USER McStasScript/configuration.yaml  /opt/conda/lib/python3.10/site-packages/mcstasscript/
 
 #### Git puller ####
 
