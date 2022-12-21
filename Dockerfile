@@ -3,27 +3,8 @@ FROM jupyter/base-notebook:ubuntu-22.04
 
 USER root
 
-# get McCode debian packages: release 2.7.2 and release 3.2
-RUN wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-2.7.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-comps-2.7.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-manuals-2.7.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-matlab-mcplot-2.7.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-perl-cmdline-2.7.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mccodelib-2.7.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcdisplay-pyqtgraph-2.7.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcdisplay-webgl-2.7.2-deb64.deb  \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcdoc-2.7.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcgui-2.7.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcplot-matplotlib-2.7.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcplot-pyqtgraph-2.7.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcplot-svg-2.7.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcrun-2.7.2-deb64.deb  \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-ncrystal-2.7.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcresplot-2.7.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcdisplay-mantid-2.7.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-mcpl-2.7.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-ncrystal-2.7.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-3.2-deb64.deb \
+# get McCode debian packages: McStas release 3.2
+RUN  wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-3.2-deb64.deb \
 &&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-comps-3.2-deb64.deb \
 &&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-manuals-3.2-deb64.deb \
 &&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-matlab-mcplot-3.2-deb64.deb \
