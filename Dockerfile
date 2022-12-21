@@ -49,7 +49,7 @@ RUN  wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcsta
 
 # install McStas, and make sure we use the python from the system for it, and let conda-based Python modules be used from with McStas
 RUN apt install -y ./*.deb && rm *.deb \
-  && ln -s /opt/conda /usr/share/mcstas/2.7.2/miniconda3 && ln -s /opt/conda /usr/share/mcstas/3.2/miniconda3
+  && ln -s /opt/conda /usr/share/mcstas/3.2/miniconda3
 
 
 # Remove light-locker to prevent screen lock
