@@ -69,7 +69,7 @@ USER $NB_USER
 RUN cd /opt/install && \
    conda env update -n base --file environment.yml
 
-COPY --chown=$NB_USER:$NB_GID McStasScript/configuration.yaml  /opt/conda/lib/python3.10/site-packages/mcstasscript/
+COPY McStasScript/configuration.yaml  /opt/conda/lib/python3.10/site-packages/mcstasscript/
 
 #### Git puller ####
 
@@ -78,5 +78,5 @@ RUN pip install nbgitpuller
 # RUN jupyter serverextension enable nbgitpuller --sys-prefix
 
 # this is for testing whether git puller is working when running container locally
-RUN jupyter serverextension enable --py nbgitpuller
+# RUN jupyter serverextension enable --py nbgitpuller
 
