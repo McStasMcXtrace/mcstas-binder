@@ -3,25 +3,25 @@ FROM jupyter/base-notebook:ubuntu-22.04
 
 USER root
 
-# get McCode debian packages: McStas release 3.2
-RUN  wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-3.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-comps-3.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-manuals-3.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-matlab-mcplot-3.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-perl-cmdline-3.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mccodelib-3.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcdisplay-pyqtgraph-3.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcdisplay-webgl-3.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcdoc-3.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcgui-3.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcplot-matplotlib-3.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcplot-pyqtgraph-3.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcrun-3.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-ncrystal-3.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcresplot-3.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcdisplay-mantid-3.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-mcpl-3.2-deb64.deb \
-&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-ncrystal-3.2-deb64.deb \
+# get McCode debian packages: release release 3.3
+RUN  wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-3.3-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-comps-3.3-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-manuals-3.3-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-matlab-mcplot-3.3-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-perl-cmdline-3.3-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mccodelib-3.3-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcdisplay-pyqtgraph-3.3-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcdisplay-webgl-3.3-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcdoc-3.3-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcgui-3.3-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcplot-matplotlib-3.3-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcplot-pyqtgraph-3.3-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcrun-3.3-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-ncrystal-3.3-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcresplot-3.3-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-tools-python-mcdisplay-mantid-3.3-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-mcpl-3.3-deb64.deb \
+&&   wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcstas-ncrystal-3.3-deb64.deb \
 &&   apt update && apt install -y software-properties-common && add-apt-repository ppa:mozillateam/ppa \
 && echo 'Package: *' > /etc/apt/preferences.d/mozilla-firefox \
 && echo Pin: release o=LP-PPA-mozillateam >> /etc/apt/preferences.d/mozilla-firefox \
@@ -48,8 +48,7 @@ RUN  wget http://packages.mccode.org/debian/dists/stable/main/binary-amd64/mcsta
    firefox
 
 # install McStas, and make sure we use the python from the system for it, and let conda-based Python modules be used from with McStas
-RUN apt install -y ./*.deb && rm *.deb \
-  && ln -s /opt/conda /usr/share/mcstas/3.2/miniconda3
+RUN apt install -y ./*.deb && rm *.deb && ln -s /opt/conda /usr/share/mcstas/3.3/miniconda3
 
 
 # Remove light-locker to prevent screen lock
@@ -69,7 +68,7 @@ USER $NB_USER
 RUN cd /opt/install && \
    conda env update -n base --file environment.yml
 
-COPY McStasScript/configuration.yaml  /opt/conda/lib/python3.10/site-packages/mcstasscript/
+COPY McStasScript/configuration.yaml  /opt/conda/lib/python3.11/site-packages/mcstasscript/
 
 #### Git puller ####
 
@@ -78,5 +77,5 @@ RUN pip install nbgitpuller
 # RUN jupyter serverextension enable nbgitpuller --sys-prefix
 
 # this is for testing whether git puller is working when running container locally
-# RUN jupyter serverextension enable --py nbgitpuller
+# RUN jupyter labextension enable --py nbgitpuller
 
