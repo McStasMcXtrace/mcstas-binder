@@ -19,9 +19,20 @@ dependencies:
   - pythreejs
   - scipp::mantid-framework
   - scipp::scippneutron
+  - pyaml
+  - ply
+  - matplotlib
+  - numpy
+  - tornado
   - scipy
+  - pillow
+  - pyqtgraph
+  - pyqt
+  - nomkl
+  - qscintilla2
   - pip:
       - McStasScript
+      - guide_bot
       - sasmodels
       - bumps
       - .
