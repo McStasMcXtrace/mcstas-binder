@@ -15,6 +15,7 @@ dependencies:
   - pyqt
   - nomkl
   - qscintilla2
+  - jupytext
   - pip:
       - McStasScript
       - guide_bot
