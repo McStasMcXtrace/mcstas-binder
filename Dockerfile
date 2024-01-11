@@ -53,6 +53,8 @@ USER $NB_USER
 RUN cd /opt/install && \
    conda env update -n base --file environment.yml
 
+RUN /opt/conda/bin/mcdoc -i
+
 COPY McStasScript/configuration.yaml  /opt/conda/lib/python3.10/site-packages/mcstasscript/
 
 #### Git puller ####
