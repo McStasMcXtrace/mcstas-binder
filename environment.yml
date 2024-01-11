@@ -1,7 +1,7 @@
 channels:
   - conda-forge
 dependencies:
-  - jupyter-server-proxy>=1.4
+  - jupyter-server-proxy
   - websockify
   - pyaml
   - ply
