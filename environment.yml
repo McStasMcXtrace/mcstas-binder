@@ -4,6 +4,19 @@ dependencies:
   - jupyter-server-proxy>=1.4
   - pip
   - websockify
+  - pyaml
+  - ply
+  - matplotlib
+  - numpy
+  - tornado
+  - scipy
+  - pillow
+  - pyqtgraph
+  - pyqt
+  - nomkl
+  - qscintilla2
+  - jupytext
   - pip:
       - McStasScript
+      - guide_bot
       - .
