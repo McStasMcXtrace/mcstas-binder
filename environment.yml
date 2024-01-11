@@ -2,7 +2,6 @@ channels:
   - conda-forge
 dependencies:
   - jupyter-server-proxy>=1.4
-  - pip
   - websockify
   - pyaml
   - ply
@@ -16,6 +15,10 @@ dependencies:
   - nomkl
   - qscintilla2
   - jupytext
+  - mcstas
+  - mcpl
+  - ncrystal
+  - pip
   - pip:
       - McStasScript
       - guide_bot
