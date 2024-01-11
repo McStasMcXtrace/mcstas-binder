@@ -16,6 +16,9 @@ dependencies:
   - nomkl
   - qscintilla2
   - jupytext
+  - mcstas
+  - ncrystal
+  - mcpl
   - pip:
       - McStasScript
       - guide_bot

@@ -2,16 +2,11 @@ FROM quay.io/jupyter/base-notebook:ubuntu-22.04
 
 USER root
 
-# get McCode debian packages: Latest release 
-RUN  wget https://packages.mccode.org/debian/mccode.list -O /etc/apt/sources.list.d/mccode.list \ 
-&& apt update && apt install -y software-properties-common && add-apt-repository ppa:mozillateam/ppa \
+RUN apt update && apt install -y software-properties-common && add-apt-repository ppa:mozillateam/ppa \
 && echo 'Package: *' > /etc/apt/preferences.d/mozilla-firefox \
 && echo Pin: release o=LP-PPA-mozillateam >> /etc/apt/preferences.d/mozilla-firefox \
 && echo Pin-Priority: 1001 >> /etc/apt/preferences.d/mozilla-firefox \
 && apt-get install -y dbus-x11 \
-   mcstas-suite-python-ng \
-   mcpl \
-   ncrystal \
    xfce4 \
    xfce4-panel \
    xfce4-session \
@@ -33,7 +28,7 @@ RUN  wget https://packages.mccode.org/debian/mccode.list -O /etc/apt/sources.lis
    firefox
 
 # install McStas, and make sure we use the python from the system for it, and let conda-based Python modules be used from with McStas
-RUN ln -s /opt/conda /usr/share/mcstas/3.4/miniconda3
+#RUN ln -s /opt/conda /usr/share/mcstas/3.4/miniconda3
 
 
 # Remove light-locker to prevent screen lock
@@ -49,11 +44,13 @@ RUN chown -R $NB_UID:$NB_GID $HOME
 ADD . /opt/install
 RUN fix-permissions /opt/install
 
-RUN /usr/bin/mcdoc -i
+# RUN /usr/bin/mcdoc -i
 
 USER $NB_USER
 RUN cd /opt/install && \
    conda env update -n base --file environment.yml
+
+RUN /opt/conda/bin/mcdoc -i
 
 COPY McStasScript/configuration.yaml  /opt/conda/lib/python3.10/site-packages/mcstasscript/
 
