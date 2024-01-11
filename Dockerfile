@@ -49,11 +49,11 @@ RUN chown -R $NB_UID:$NB_GID $HOME
 ADD . /opt/install
 RUN fix-permissions /opt/install
 
+RUN /usr/bin/mcdoc -i
+
 USER $NB_USER
 RUN cd /opt/install && \
    conda env update -n base --file environment.yml
-
-RUN /usr/bin/mcdoc -i
 
 COPY McStasScript/configuration.yaml  /opt/conda/lib/python3.10/site-packages/mcstasscript/
 
