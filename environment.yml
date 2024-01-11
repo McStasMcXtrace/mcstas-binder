@@ -17,10 +17,10 @@ dependencies:
   - qscintilla2
   - jupytext
   - mcstas
-  - mcpl
   - ncrystal
   - pip
   - pip:
       - McStasScript
       - guide_bot
+      - mcpl
       - .
