@@ -43,7 +43,7 @@ ADD . /opt/install
 RUN fix-permissions /opt/install
 
 USER $NB_USER
-RUN cd /opt/install && conda env update -n base -c conda-forge --file environment.yml && mcdoc -i
+RUN cd /opt/install && conda-forge env update -n base --file environment.yml --prune
 
 COPY McStasScript/configuration.yaml  /opt/conda/lib/python3.11/site-packages/mcstasscript/
 
