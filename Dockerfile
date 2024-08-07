@@ -1,4 +1,5 @@
 FROM quay.io/jupyter/base-notebook:4d70cf8da953
+# Means Python 3.10, see https://github.com/jupyter/docker-stacks
 
 USER root
 
